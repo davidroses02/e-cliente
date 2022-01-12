@@ -35,7 +35,6 @@
             // Empieza el comportamiento
 
             const comportamientoBoton = function(e) {
-                //display.innerHTML = "0";
                 let numero = e.innerText;
                 switch (numero) {
                     case '1':
@@ -65,17 +64,46 @@
                         display.innerHTML = "0";
                         break;
                     case 'DEL':
+                        let longitud = display.innerHTML.length;
+                        display.innerHTML = display.innerHTML.substring(0, longitud - 1);
+                    break;
+                    case '+/-':
+                        if (display.innerHTML !== '0' && display.innerHTML > 0) {
+                            display.innerHTML = '-' + display.innerHTML;
+                        } else {       
+                            display.innerHTML = Math.abs(display.innerHTML) + "";
+                        }
+                        break;
+                    case ',':
+                        if (!display.innerHTML.includes(".")) {
+                            display.innerHTML += ".";
+                        }
+                        break;
+                    case '+':
+                        var operando1 =  parseFloat('display.innerHTML');
+                        reset();
+                        gestionarOperaciones();
+                        break;
+                    case '=':
+                        var operando2 =  parseFloat('display.innerHTML');
                         
-                        // borra una cifra (la que está más a la derecha)
+
                     break;
                     default:
                         break;
                 }
-                //display.innerHTML += numero;
+            }
+
+            const reset = function() {
+                display.innerHTML = "0";
             }
 
         }
         
+    }
+
+    const gestionarOperaciones = function() {
+
     }
 
     const anadirCSSDisplay = function(e) {
@@ -115,9 +143,7 @@
         return newDiv;
     }
     
-    document.addEventListener('DOMContentLoaded' , function () {
-        miCalculadora.init();
-    });
+    document.addEventListener('DOMContentLoaded' , miCalculadora.init);
 
 
 }
