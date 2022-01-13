@@ -54,6 +54,7 @@
                     case '7':
                     case '8':
                     case '9':
+                        
                         if (display.innerHTML === '0') {
                             display.innerHTML = numero;
                         } else {
@@ -69,7 +70,7 @@
                         }
                         break;
                     case 'CE':
-                        display.innerHTML = "0";
+                        reset();
                         break;
                     case 'DEL':
                         let longitud = display.innerHTML.length;
