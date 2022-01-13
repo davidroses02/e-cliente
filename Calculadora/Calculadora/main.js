@@ -5,6 +5,14 @@
 {
 
     const miCalculadora = {
+        operando1: 0,
+        operando2: 0,
+        suma: false,
+        resta: false,
+        porcentaje: false,
+        mult: false,
+        division: false,
+
         init: function() {
 
             let botones = [
@@ -80,13 +88,60 @@
                         }
                         break;
                     case '+':
-                        var operando1 =  parseFloat('display.innerHTML');
+                        miCalculadora.operando1 =  display.innerHTML;
                         reset();
-                        gestionarOperaciones();
+                        miCalculadora.suma = true;
+                        break;
+                    case '-':
+                        miCalculadora.operando1 =  display.innerHTML;
+                        reset();
+                        miCalculadora.resta = true;
+                        break;
+                    case 'X':
+                        miCalculadora.operando1 =  display.innerHTML;
+                        reset();
+                        miCalculadora.mult = true;
+                        break;
+                    case '%':
+                        miCalculadora.operando1 =  display.innerHTML;
+                        reset();
+                        miCalculadora.porcentaje = true;
+                        break;
+                    case '/':
+                        miCalculadora.operando1 =  display.innerHTML;
+                        reset();
+                        miCalculadora.division = true;
                         break;
                     case '=':
-                        var operando2 =  parseFloat('display.innerHTML');
-                        
+                        miCalculadora.operando2 =  display.innerHTML;
+                        reset();
+
+                        if (miCalculadora.suma) {
+                            display.innerHTML = parseInt(miCalculadora.operando1) + parseInt(miCalculadora.operando1) + "";
+                            miCalculadora.suma = false;
+                            miCalculadora.operando1 = 0;
+                            miCalculadora.operando2 = 0;
+                        } else if (miCalculadora.resta) {
+                            display.innerHTML = parseInt(miCalculadora.operando1) - parseInt(miCalculadora.operando1) + "";
+                            miCalculadora.resta = false;
+                            miCalculadora.operando1 = 0;
+                            miCalculadora.operando2 = 0;
+                        } else if (miCalculadora.mult) {
+                            display.innerHTML = parseInt(miCalculadora.operando1) * parseInt(miCalculadora.operando1) + "";
+                            miCalculadora.mult = false;
+                            miCalculadora.operando1 = 0;
+                            miCalculadora.operando2 = 0;
+                        } else if (miCalculadora.porcentaje) {
+                            display.innerHTML = parseInt(miCalculadora.operando1) % parseInt(miCalculadora.operando1) + "";
+                            miCalculadora.porcentaje = false;
+                            miCalculadora.operando1 = 0;
+                            miCalculadora.operando2 = 0;
+                        } else if (miCalculadora.division) {
+                            display.innerHTML = parseInt(miCalculadora.operando1) / parseInt(miCalculadora.operando1) + "";
+                            miCalculadora.division = false;
+                            miCalculadora.operando1 = 0;
+                            miCalculadora.operando2 = 0;
+                        }
 
                     break;
                     default:
@@ -100,10 +155,6 @@
 
         }
         
-    }
-
-    const gestionarOperaciones = function() {
-
     }
 
     const anadirCSSDisplay = function(e) {
