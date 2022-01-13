@@ -54,91 +54,92 @@
                     case '7':
                     case '8':
                     case '9':
-                        
-                        if (display.innerHTML === '0') {
-                            display.innerHTML = numero;
-                        } else {
-                            display.innerHTML += numero;
-                        }
+                            if (display.innerHTML === '0') {
+                                display.innerHTML = numero;
+                            } else {
+                                display.innerHTML += numero;
+                            }
                         break;
                     case '0':
-                        if (display.innerHTML === '0') {
-                            display.innerHTML = '';
-                            display.innerHTML += numero;
-                        } else {
-                            display.innerHTML += numero;
-                        }
+                            if (display.innerHTML === '0') {
+                                display.innerHTML = '';
+                                display.innerHTML += numero;
+                            } else {
+                                display.innerHTML += numero;
+                            }
                         break;
                     case 'CE':
-                        reset();
+                            reset();
                         break;
                     case 'DEL':
-                        let longitud = display.innerHTML.length;
-                        display.innerHTML = display.innerHTML.substring(0, longitud - 1);
-                    break;
+                            let longitud = display.innerHTML.length;
+                            display.innerHTML = display.innerHTML.substring(0, longitud - 1);
+                            break;
                     case '+/-':
-                        if (display.innerHTML !== '0' && display.innerHTML > 0) {
-                            display.innerHTML = '-' + display.innerHTML;
-                        } else {       
-                            display.innerHTML = Math.abs(display.innerHTML) + "";
-                        }
-                        break;
+                            if (display.innerHTML !== '0' && display.innerHTML > 0) {
+                                display.innerHTML = '-' + display.innerHTML;
+                            } else {       
+                                display.innerHTML = Math.abs(display.innerHTML) + "";
+                            }
+                            break;
                     case ',':
-                        if (!display.innerHTML.includes(".")) {
-                            display.innerHTML += ".";
-                        }
-                        break;
+                            if (!display.innerHTML.includes(".")) {
+                                display.innerHTML += ".";
+                            }
+                            break;
                     case '+':
-                        miCalculadora.operando1 =  display.innerHTML;
-                        reset();
-                        miCalculadora.suma = true;
-                        break;
+
+                            miCalculadora.operando1 =  display.innerHTML;
+                            reset();
+                            miCalculadora.suma = true;
+                            break;
                     case '-':
-                        miCalculadora.operando1 =  display.innerHTML;
-                        reset();
-                        miCalculadora.resta = true;
-                        break;
+
+                            miCalculadora.operando1 =  display.innerHTML;
+                            reset();
+                            miCalculadora.resta = true;
+                            break;
                     case 'X':
-                        miCalculadora.operando1 =  display.innerHTML;
-                        reset();
-                        miCalculadora.mult = true;
-                        break;
+                            miCalculadora.operando1 =  display.innerHTML;
+                            reset();
+                            miCalculadora.mult = true;
+                            break;
                     case '%':
-                        miCalculadora.operando1 =  display.innerHTML;
-                        reset();
-                        miCalculadora.porcentaje = true;
-                        break;
+                            miCalculadora.operando1 =  display.innerHTML;
+                            reset();
+                            miCalculadora.porcentaje = true;
+                            break;
                     case '/':
-                        miCalculadora.operando1 =  display.innerHTML;
-                        reset();
-                        miCalculadora.division = true;
-                        break;
+                            miCalculadora.operando1 =  display.innerHTML;
+                            reset();
+                            miCalculadora.division = true;
+                            break;
                     case '=':
                         miCalculadora.operando2 =  display.innerHTML;
                         reset();
 
                         if (miCalculadora.suma) {
-                            display.innerHTML = parseInt(miCalculadora.operando1) + parseInt(miCalculadora.operando1) + "";
+                            display.innerHTML = parseInt(miCalculadora.operando1) + parseInt(miCalculadora.operando2) + "";
                             miCalculadora.suma = false;
                             miCalculadora.operando1 = 0;
                             miCalculadora.operando2 = 0;
                         } else if (miCalculadora.resta) {
-                            display.innerHTML = parseInt(miCalculadora.operando1) - parseInt(miCalculadora.operando1) + "";
+                            display.innerHTML = parseInt(miCalculadora.operando1) - parseInt(miCalculadora.operando2) + "";
                             miCalculadora.resta = false;
                             miCalculadora.operando1 = 0;
                             miCalculadora.operando2 = 0;
                         } else if (miCalculadora.mult) {
-                            display.innerHTML = parseInt(miCalculadora.operando1) * parseInt(miCalculadora.operando1) + "";
+                            display.innerHTML = parseInt(miCalculadora.operando1) * parseInt(miCalculadora.operando2) + "";
                             miCalculadora.mult = false;
                             miCalculadora.operando1 = 0;
                             miCalculadora.operando2 = 0;
                         } else if (miCalculadora.porcentaje) {
-                            display.innerHTML = parseInt(miCalculadora.operando1) % parseInt(miCalculadora.operando1) + "";
+                            display.innerHTML = parseInt(miCalculadora.operando1) % parseInt(miCalculadora.operando2) + "";
                             miCalculadora.porcentaje = false;
                             miCalculadora.operando1 = 0;
                             miCalculadora.operando2 = 0;
                         } else if (miCalculadora.division) {
-                            display.innerHTML = parseInt(miCalculadora.operando1) / parseInt(miCalculadora.operando1) + "";
+                            display.innerHTML = parseInt(miCalculadora.operando1) / parseInt(miCalculadora.operando2) + "";
                             miCalculadora.division = false;
                             miCalculadora.operando1 = 0;
                             miCalculadora.operando2 = 0;
@@ -175,7 +176,7 @@
         e.style.setProperty("display", "grid"); 
         e.style.setProperty("grid-template-columns", "1fr, 1fr, 1fr, 1fr"); 
         e.style.setProperty("width", "140px"); 
-        e.style.setProperty("height", "240px"); 
+        e.style.setProperty("height", "250px"); 
         e.style.setProperty("border", "3px black solid"); 
         e.style.setProperty("background-color", "#071690"); 
     }
