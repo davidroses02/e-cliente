@@ -9,33 +9,53 @@
         // COMPORTAMIENTO EDAD
         document.getElementById("botonEdad").addEventListener("click", function() {
             let inputEdad = document.querySelector("#edad");
-            let edad = window.gato.edad;
-            inputEdad.removeAttribute("disabled");
-            inputEdad.setAttribute("value", edad);
-            inputEdad.setAttribute("disabled", "");
+            editarInputs(inputEdad, window.gato.edad);
         })
 
         // GATO JUGANDO
         document.getElementById("jugar").addEventListener("click", function() {
             let inputPeso = document.querySelector("#peso");
             try {
-                
-                window.gato.jugar();
-                
-                // meter esto en un método
-                inputPeso.removeAttribute("disabled");
-                inputPeso.setAttribute("value", window.gato.peso);
-                inputPeso.setAttribute("disabled", "");
-
+                window.gato.jugar();    
+                fotoAcciones("./img/jugar.jpg");
+                editarInputs(inputPeso, window.gato.peso);
             } catch (error) {
                 deshabilitarBotones();
-                mostrarMensaje(error)
-                // foto de muerto -->
-                // let img = document.getElementByTagName("img");
-                // img.setAttribute("src", "./img/gatoMuerto.png");
+                mostrarMensaje(error);
+                fotoGatoMuerto();
             }
         })
 
+        // GATO COMIENDO
+        document.getElementById("eat").addEventListener("click", function() {
+            let inputPeso = document.querySelector("#peso");
+            try {
+                window.gato.comer();
+                fotoAcciones("./img/comer.png");
+                editarInputs(inputPeso, window.gato.peso);
+            } catch (error) {
+                deshabilitarBotones();
+                mostrarMensaje(error);
+                fotoGatoMuerto();
+            }
+        })
+
+    }
+
+    const fotoAcciones = function(ruta) {
+        let img = document.querySelector("#image");
+        img.setAttribute("src", ruta);
+    }
+
+    const editarInputs = function(input, param) {
+        input.removeAttribute("disabled");
+        input.setAttribute("value", param);
+        input.setAttribute("disabled", "");
+    }
+
+    const fotoGatoMuerto = function() {
+        let img = document.querySelector("#image");
+        img.setAttribute("src", "./img/gatoMuerto.png");
     }
 
     const deshabilitarBotones = function() {

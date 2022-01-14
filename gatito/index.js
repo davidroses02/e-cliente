@@ -52,7 +52,7 @@
                     <body>
                         <h1>${gato.nombre}</h1><br>
                         <label>Nombre: <input value="${gato.nombre}" disabled></label><br><br>
-                        <img width="380" src="./img/principal.jpg"/><br><br>
+                        <img id="image" width="380" src="./img/principal.jpg"/><br><br>
                         <label>raza: <input value="${gato.raza}" disabled></label><br>
                         <label>Fecha: <input value="${gato.fecha}" disabled></label><br>
                         <label>Peso: <input value="${gato.peso}" id="peso" disabled></label><br>

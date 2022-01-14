@@ -14,6 +14,9 @@ class Gato {
 
     comer() {
         this.peso++;
+        if (this.peso > 15) {
+            throw "El gato murió por gordo.";
+        }
     }
     
     jugar() {
