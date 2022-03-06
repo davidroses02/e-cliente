@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Magarín">
+    <script src="main.js"></script>
+    <title>JavaScript. Primeras prácticas</title>
+</head>
+
+<body>
+    <noscript>Habilita JavaScript</noscript>
+    <h1>Ejercicio 6. DNI válido</h1>
+    <p></p>
+
+    <fieldset>
+        <legend>DNI </legend>
+        <p><label>Números: <input id="numeros" type="text"></label></p>
+        <p><label>Letra: <input id="letra" type="text"></label></p>
+        <button id="confirma">Confirma</button><span id="mensaje"></span>
+    </fieldset>
+    <ol>
+        <li>Abre la consola para ver también el resultado</li>
+        <li>En este ejercicio hay comunicación con el árbol DOM:</li>
+        <ul>
+            <li>document.getElementById()
+                <ul>
+                    <li> obtiene el elemento del árbol DOM</li>
+                </ul>
+            </li>
+            <li>.addEventListener("click", callback)
+                <ul>
+                    <li>asocia un evento a un elemento del árbol DOM</li>
+                </ul>
+            </li>
+            <li>mensajeSpan.textContent: <ul>
+                    <li>actualiza el contenido del span</li>
+                </ul>
+            </li>
+            <li>document.addEventListener("DOMContentLoaded", callback)
+                <ul>
+                    <li>imprescindible para poder trabajar con los
+                        elementos del árbol DOM</li>
+                </ul>
+            </li>
+        </ul>
+
+    </ol>
+</body>
+
+</html>

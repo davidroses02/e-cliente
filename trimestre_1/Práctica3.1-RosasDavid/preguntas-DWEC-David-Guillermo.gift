@@ -1,0 +1,97 @@
+// question: 0  name: Switch category to $module$/top/Tema3
+$CATEGORY: $module$/top/Tema3
+
+
+// question: 0  name: Switch category to $module$/top/Tema3/ArrayNumberMath
+$CATEGORY: $module$/top/Tema3/ArrayNumberMath
+
+
+// question: 20703  name: El objeto window contiene información de todas las ventanas abiertas en el navegador
+::El objeto window contiene información de todas las ventanas abiertas en el navegador::[html]<p>El objeto window contiene información de todas las ventanas abiertas en el navegador<br></p>{
+	~[moodle]Verdadero;
+	=[moodle]Falsa;
+}
+
+
+// question: 20698  name: El objeto Window hereda del objeto document.
+::El objeto Window hereda del objeto document.::[html]<p>El objeto Window hereda del objeto document.<br></p>{
+	~[moodle]Falso;
+	=[moodle]verdadero;
+}
+
+
+// question: 20699  name: Elige la opción correcta.
+::Elige la opción correcta.::[html]<p>Elige la opción correcta.<br></p>{
+	~[moodle]Window.console es una referencia al objeto que contiene las propiedades del ordenador;
+	~[moodle]El objeto Navigator provee acceso a la consola de depuración de los navegadores;
+	=[moodle]Window es el objeto principal en la jerarquía y contiene las propiedades y métodos para controlar la ventana del navegador.;
+}
+
+
+// question: 20700  name: Elige la opción correcta.
+::Elige la opción correcta.::[html]<p>Elige la opción correcta.<br></p>{
+	=[moodle]El objeto Console provee acceso a la consola de depuración de los navegadores;
+	~[moodle]La propiedad window.location es de lectura y escritura;#[moodle]este método no existe en JavaScript, sino en Java.
+	~[moodle]En javascript no existe ningún objeto predefinido llamado location;#[moodle]este método devuelve el array convertido en una cadena con el separador que le indiquemos.
+}
+
+
+// question: 20705  name: window.close() cierra siempre la ventana actual
+::window.close() cierra siempre la ventana actual::[html]<p>window.close() cierra siempre la ventana actual<br></p>{
+	~[moodle]Verdadero;
+	=[moodle]Falsa;
+}
+
+
+// question: 20706  name: ¿Cómo mover la ventana actual a otra ruta por consola?
+::¿Cómo mover la ventana actual a otra ruta por consola?::[html]<p>¿Cómo mover la ventana actual a otra ruta por consola?<br></p>{
+	=[moodle]todas son correctas;
+	~[moodle]window.location \= "nueva ruta";
+	~[moodle]window.location.href \= "nueva ruta";
+	~[moodle]window.location.assign("nueva ruta") ;
+}
+
+
+// question: 20701  name: ¿En cuántas pestañas se comparte el objeto Window?
+::¿En cuántas pestañas se comparte el objeto Window?::[html]<p>¿En cuántas pestañas se comparte el objeto Window?<br></p>{
+	~[moodle]En todas;
+	~[moodle]Hay un límite de 10 pestañas;
+	~[moodle]Hay un límite de 20 pestañas;
+	=[moodle]No se comparte entre diferentes pestañas;
+}
+
+
+// question: 20704  name: ¿Qué devuelve la propiedad screen.width?
+::¿Qué devuelve la propiedad screen.width?::[html]<p>¿Qué devuelve la propiedad screen.width?<br></p>{
+	~[moodle]Devuelve el alto de la pantalla de la pantalla en píxeles;
+	=[moodle]Devuelve el ancho de la pantalla en píxeles.;
+	~[moodle]Devuelve las pulgadas de la pantalla;
+}
+
+
+// question: 20708  name: ¿Que devuelve navigator.online?
+::¿Que devuelve navigator.online?::[html]<p>¿Que devuelve navigator.online?<br></p>{
+	~[moodle]El dominio de la página actual (si la ventana está en blanco devuelve una cadena vacía);
+	~[moodle]Una cadena de caracteres que hace referencia al navegador;
+	=[moodle]Un valor booleano que indica si el navegador está funcionando en línea;
+	~[moodle]La configuración de red del navegador;
+}
+
+
+// question: 20707  name: ¿Qué devuelve Window.Screen?
+::¿Qué devuelve Window.Screen?::[html]<p>¿Qué devuelve Window.Screen?<br></p>{
+	~[moodle]Una cadena de caracteres con la información de la pantalla;
+	~[moodle]Un objeto con la información de la pantalla;
+	=[moodle]Una referencia al objeto de pantalla asociado con la ventana.;
+}
+
+
+// question: 20702  name: ¿Que hace history.go(-1)?
+::¿Que hace history.go(-1)?::[html]<p>¿Que hace history.go(-1)?<br></p>{
+	~[moodle]Te lleva a los ajustes del navegador;
+	~[moodle]Te lleva a la página siguiente del historial de navegación;
+	=[moodle]Te lleva a la página anterior del historial de navegación;
+	~[moodle]Te enseña un array con todo el historial;
+}
+
+
